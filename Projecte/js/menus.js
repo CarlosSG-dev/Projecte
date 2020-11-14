@@ -1,0 +1,75 @@
+function iniciar(){
+    
+    document.addEventListener('onload', navbar());
+    document.addEventListener('onload', footer());
+}
+function footer(){
+    let footer = document.write(`<footer class="footer-distributed">
+
+			<div class="footer-right">
+
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+				<a href="#"><i class="fa fa-github"></i></a>
+
+			</div>
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a class="link-1" href="#">Home</a>
+
+					<a href="#">Blog</a>
+
+					<a href="#">Pricing</a>
+
+					<a href="#">About</a>
+
+					<a href="#">Faq</a>
+
+					<a href="#">Contact</a>
+				</p>
+
+				<p>Company Name &copy; 2015</p>
+			</div>
+
+		</footer>`);
+
+    $('#footer').html(footer);
+
+
+}
+
+function navbar(){
+    let navbar = document.write(`<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+   
+    <a class="navbar-brand" href="index.html">Crypto Simarro</a>
+  
+   
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Exchanges</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ranking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Proyectos</a>
+        </li>
+      </ul>
+    </div>
+  </nav>`);
+
+  $('#navbar').html(navbar);
+
+}
+
+iniciar();
+

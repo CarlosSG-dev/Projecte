@@ -23,6 +23,10 @@ section {
   text-align: left;
   font: normal 16px sans-serif;
   padding: 45px 50px;
+
+  /*EDITAT*/
+  position: absolute;
+  bottom: 0;
 }
 
 .footer-distributed .footer-left p {
@@ -81,6 +85,23 @@ section {
   margin-left: 3px;
   transition:all .25s;
 }
+
+.facebookicono{
+  background-image: url(../IMG/Facebook\,\ logo.png) !important;
+  background-size:35px;
+}
+.twitter{
+  background-image: url(../IMG/Twitter\,\ logo.png);
+  background-size:35px;
+}
+.instagram{
+  background-image: url(../IMG/Instagram\,\ logo.png);
+  background-size:35px;
+}
+.github{
+  background-size:35px;
+}
+
 
 .footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
 

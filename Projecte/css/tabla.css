@@ -1,0 +1,14 @@
+table th {
+    text-align: center; 
+ }
+ 
+ .table {
+    margin: auto;
+    width: 50% !important; 
+    position: absolute;
+    top: 100px;
+    display: flexbox;
+    justify-content: center;
+
+
+ }

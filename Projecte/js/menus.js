@@ -8,10 +8,10 @@ function footer(){
 
 			<div class="footer-right">
 
-				<a href="#"  class="facebookicono"><i></i></a>
-				<a href="#"  class="twitter"><i></i></a>
-				<a href="#"  class="instagram"><i></i></a>
-				<a href="#" class="github"><i ></i></a>
+				<a href="#"  class="facebookiconofoot"><i></i></a>
+				<a href="#"  class="twitterfoot"><i></i></a>
+				<a href="#"  class="instagramfoot"><i></i></a>
+				<a href="#" class="githubfoot"><i ></i></a>
 
 			</div>
 
@@ -59,7 +59,7 @@ function navbar(){
           <a class="nav-link" href="#">Ranking</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Proyectos</a>
+          <a class="nav-link" href="login.html">Login</a>
         </li>
       </ul>
     </div>

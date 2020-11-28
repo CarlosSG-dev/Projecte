@@ -86,19 +86,19 @@ section {
   transition:all .25s;
 }
 
-.facebookicono{
+.facebookiconofoot{
   background-image: url(../IMG/Facebook\,\ logo.png) !important;
   background-size:35px;
 }
-.twitter{
+.twitterfoot{
   background-image: url(../IMG/Twitter\,\ logo.png);
   background-size:35px;
 }
-.instagram{
+.instagramfoot{
   background-image: url(../IMG/Instagram\,\ logo.png);
   background-size:35px;
 }
-.github{
+.githubfoot{
   background-size:35px;
 }
 

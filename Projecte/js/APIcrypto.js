@@ -79,4 +79,4 @@ function crearTablaDeDatos(){
 }
 
 let botontabla = document.getElementById("mostrarTabla");
-document.addEventListener("onclick", crearTablaDeDatos());
+botontabla.addEventListener("onclick", crearTablaDeDatos());

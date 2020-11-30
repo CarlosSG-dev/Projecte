@@ -1,9 +1,10 @@
 function iniciar(){
     
     document.addEventListener('onload', navbar());
-    document.addEventListener('onload', footer());
+    document.getElementsByTagName('footer').addEventListener('onload',footer()); 
+    
 }
-function footer(){
+ function footer(){
     let footer = document.write(`<footer class="footer-distributed">
 
 			<div class="footer-right">
@@ -36,7 +37,7 @@ function footer(){
 
     $('#footer').html(footer);
 
-
+ 
 }
 
 function navbar(){
@@ -68,6 +69,21 @@ function navbar(){
   $('#navbar').html(navbar);
 
 }
+var btn = $('#buttonTop');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
 
 iniciar();
 

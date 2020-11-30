@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Simarro @CarlossSoler</title>
     <!--CSS-->
-    <link rel="stylesheet" media="screen" href="../css/style.css">
-    <link rel="stylesheet" href="../css/menus.css">
-    <link rel="stylesheet" href="../css/tabla.css">
+    <link rel="stylesheet" media="screen" href="css/style.css">
+    <link rel="stylesheet" href="css/menus.css">
+    <link rel="stylesheet" href="css/tabla.css">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.0/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="css/SPA.scss">
     <!-- Bootstrap & scripts-->
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
     </script>
@@ -23,23 +26,20 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
         
     </script>
+
     <script src="https://unpkg.com/bootstrap-table@1.18.0/dist/bootstrap-table.min.js"></script>
-    <script src="../js/responsive.js"></script>
+    
     <!--Header i footer-->
-    <script src="../js/menus.js"></script>
+    <script src="js/menus.js"></script>
+   
 
-    <!--Llibrería de particles-->
-    <script src="../js/particles.js"></script>
-    <script src="../js/app.js"></script>
-    <script src="../js/lib/stats.js"></script>
-
-    <!--JS de l'API-->
-    <script src="../js/APIcrypto.js"></script>
+   
     
 </head>
 
 <body>
-    <!--Barra de navegació per Events amb JS-->
+    <!--Botó back to top-->
+    <a id="buttonTop"></a>
     
   <!-- particles.js Contingut -->
   <div id="particles-js">
@@ -65,20 +65,49 @@
               </tr>
             </tbody>
           </table> -->
-
+          
+            <!--Footer per Events i CSS amb JS-->  
+          
+  </div>
+  <div class="wrapper">
+    <div class="banner">
+      <img class="logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/31787/axe.png" alt="" />
+    </div>
+    
+    <div class="content">
+      
+      <div class="inner">
+        <h1>Som CryptoSimarro</h1>      
+       <p>CryptoSimarro es un proyecto red entre pares de pago descentralizado impulsado por sus usuarios sin una autoridad central o intermediarios.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto voluptates ipsum reprehenderit repellat fuga quas molestiae impedit cupiditate quam laborum incidunt numquam natus nostrum error iure nisi possimus corporis voluptate?</p>
+      </div>
+  
+        <div class="img trees">
+          <h2>El futuro de la economía, la descentralización </h2>
+        </div>
+      <div class="inner">
+        <h4>Libertad de pagos</h4>
+        <p>Con Bitcoin, podrá enviar y recibir cualquier cantidad de dinero instantáneamente desde y hacia cualquier lugar del mundo, en cualquier momento. Sin bancos con horarios. Sin fronteras. Sin límites impuestos. Los usuarios de Bitcoin siempre tienen un completo control sobre su dinero.</p>
+        <h4>Seguridad y control</h4>
+        <p>Los usuarios de Bitcoin tienen completo control sobre sus transacciones; es imposible que los comerciantes fuercen cargos no deseados o detectados, como puede suceder con otros métodos de pago. Los pagos de Bitcoin pueden realizarse sin que estén asociados a información de carácter personal. Esto ofrece un alto nivel de protección contra el robo de identidad. Los usuarios de Bitcoin también pueden proteger su dinero con copias de seguridad y encriptación.</p>
+      </div>
+      </div>
+    
   </div>
   
  
+   <!--Llibrería de particles-->
+   <script src="js/particles.js"></script>
+   <script src="js/app.js"></script>
+   <script src="js/lib/stats.js"></script>
 
-
-  
+   <!--JS de l'API-->
+   <script src="js/APIcrypto.js"></script>
 
     
 </body>
-<footer>
-        <!--Footer per Events i CSS amb JS-->
-   
 
-</footer>
+<script src="js/responsive.js"></script>
+
 
 </html>

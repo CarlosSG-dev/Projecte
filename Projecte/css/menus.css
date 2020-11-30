@@ -24,8 +24,13 @@ section {
   font: normal 16px sans-serif;
   padding: 45px 50px;
 
-  /*EDITAT*/
-  position: absolute;
+ /*EDITAT*/
+ /*  position: absolute; */
+/*   */ 
+}
+
+.footerBottom{
+  position:absolute;
   bottom: 0;
 }
 

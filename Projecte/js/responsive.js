@@ -1,3 +1,5 @@
+/*Autoinvocada, posa el footer baix de la pagina*/
+
 
 (function footBottom(){
 

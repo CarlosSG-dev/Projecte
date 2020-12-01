@@ -1,10 +1,9 @@
 function iniciar(){
-    
+    /*REGISTRE D'EVENTS*/
     document.addEventListener('onload', navbar());
-    document.getElementsByTagName('footer').addEventListener('onload',footer()); 
     
 }
- function footer(){
+ /* function footer(){
     let footer = document.write(`<footer class="footer-distributed">
 
 			<div class="footer-right">
@@ -38,7 +37,7 @@ function iniciar(){
     $('#footer').html(footer);
 
  
-}
+} */
 
 function navbar(){
     let navbar = document.write(`<nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -69,6 +68,8 @@ function navbar(){
   $('#navbar').html(navbar);
 
 }
+
+/*Boto per a que torne dalt de la pàgina, apareix al fer scroll de 300*/
 var btn = $('#buttonTop');
 
 $(window).scroll(function() {

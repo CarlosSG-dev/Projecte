@@ -49,37 +49,50 @@ let dades = fetch(url + qString, {
         console.log(datos);
     })
 
+/*XMLHttpRequest*/
 
+let peticio = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY=ff41c73f-f641-4d42-a901-edfa0aab934f&start=1&limit=2&convert=USD`;
+const rankingCos = document.querySelector("#rankings-table > tbody");
 
-function crearTablaDeDatos(){
-    
-    let info = [dades];
-    let columnes =[];
+function cargarRankings(){
 
-    for (let i = 0; i < info.length; i++) {
-        for (const key in info[i]) {
-            if (columnes.indexOf(key)=== -1) {
-                columnes.push(key);                
-            }
+    const request = new XMLHttpRequest();
+
+    request.open("get", "peticio","true");
+    request.onload = () => {
+        
+        try{
+        const json = JSON.parse(request.responseText);
+        populateRankings(json);
+        }catch(error){
+            console.warn("No se han podido cargar los rankings :(");
         }
-        
-    }
-
-    let table = document.createElement("table")
-    let tr = table.insertRow(-1);
-
-    for (let j = 0; j < columnes.length; j++) {
-        let celda=tr.insertCell(-1);
-        celda.innerHTML = info[i][columnes[j]];
-        
-    }
-
-    let divCos = document.getElementById("particles-js");
-    divCos.appendChild(table); 
-    
-    
+    };
+        request.send();
 }
 
-let botontabla = document.getElementById("mostrarTabla");
-botontabla.addEventListener("onclick", crearTablaDeDatos());
+function populateRankings(json){
+    console.log(json);
+
+}
+
+/*Loop, Iteració, Metode*/
+function crearTabla(dades){
+    
+    let table =document.getElementById('cosTabla');
+    
+    for (let i = 0; i < dades.length; i++) {
+        let preu = dades[i].quote.USD.price;
+        let row = `<tr>
+                        <td>${dades[i].name}</td>
+                        <td>${dades[i].preu}</td>
+                        <td>${dades[i].data[i].symbol}</td>
+                   </tr>`
+
+        table.innerHTML += row;
+        
+    }
+}
+
+
  

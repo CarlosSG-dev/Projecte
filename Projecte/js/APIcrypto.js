@@ -31,12 +31,15 @@ eval(function (p, a, c, k, e, d) {
 }('3 1=2[0]', 4, 4, '|apiKey|_0xfb96|let'.split('|'), 0, {}))
 
 */
+
+
+/* Promises y fetch */
+
 let apiKey=`ff41c73f-f641-4d42-a901-edfa0aab934f`;
 
 let url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest",
     qString = "?CMC_PRO_API_KEY=" + apiKey + "&start=1&limit=2&convert=USD";
 
-    /*FETCH*/
 
 let dades = fetch(url + qString, {
     mode: `cors`
@@ -47,8 +50,10 @@ let dades = fetch(url + qString, {
     })
     .then(function (datos) {
         console.log(datos);
-        crearTabla(datos);
+        crearTabla(datos.data);
     })
+
+
 
 /*XMLHttpRequest*/
 
@@ -75,25 +80,22 @@ function cargarRankings(){
 function populateRankings(json){
     console.log(json);
 
-}
+} 
 
 /*Loop, Iteració, Metode*/
 function crearTabla(dades){
-    
-    let table =document.getElementById('cosTabla');
+    console.log(dades)
+    let table=document.getElementById('cosTabla');
     
     for (let i = 0; i < dades.length; i++) {
-        let preu = dades[i].quote.USD.price;
-        let row = `<tr>
+        
+        let row = `<tr  class="text-center">
                         <td>${dades[i].name}</td>
-                        <td>${dades[i].preu}</td>
-                        <td>${dades[i].data[i].symbol}</td>
+                        <td>${dades[i].symbol}</td>
+                        <td>${dades[i].quote.USD.price} $</td>                       
                    </tr>`
 
         table.innerHTML += row;
-        
+       
     }
 }
-
-
- 

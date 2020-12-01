@@ -47,6 +47,7 @@ let dades = fetch(url + qString, {
     })
     .then(function (datos) {
         console.log(datos);
+        crearTabla(datos);
     })
 
 /*XMLHttpRequest*/

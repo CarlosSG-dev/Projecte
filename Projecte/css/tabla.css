@@ -12,3 +12,6 @@ table th {
 
 
  }
+.no-records-found{
+    display:none;
+ }

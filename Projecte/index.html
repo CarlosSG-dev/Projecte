@@ -49,7 +49,7 @@
 
     <div class="content">
 
-      <div class="inner">
+      <div class="inner" id="tablapreu">
         <h1>Som CryptoSimarro</h1>
         <p>CryptoSimarro es un proyecto red entre pares de pago descentralizado impulsado por sus usuarios sin una
           autoridad central o intermediarios.</p>
@@ -61,7 +61,7 @@
       <div class="img trees">
         <!-- <h2>El futuro de la economía, la descentralización </h2> -->
         <div class='container'>
-          <table class="table text-dark mt-5 bold justify-content-center table-stripped" data-toggle="table">
+          <table class="table text-dark mt-5 bold justify-content-center table-stripped"  data-toggle="table">
             <thead>
               <tr class="bg-primary">
                 <th>Ranking</th>
@@ -157,6 +157,46 @@
         </div>
 
       </div>
+      <div class="inner" id="comprar">
+        <h1>COMPRA CRIPTOMONEDAS AQUI!</h1>
+        <p>CryptoSimarro es un proyecto red entre pares de pago descentralizado impulsado por sus usuarios sin una
+          autoridad central o intermediarios.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto voluptates ipsum reprehenderit repellat fuga
+          quas molestiae impedit cupiditate quam laborum incidunt numquam natus nostrum error iure nisi possimus
+          corporis voluptate?</p>
+      </div>
+      <div class="img trees">
+        <!-- App per a comprar criptomonedes -->
+        <div class='container'>
+            <div id="AppCompra" class="row pt-5 justify-content-center">
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-header">
+                     <h4 class="text-dark">Comprar una criptomoneda</h4>
+                     </div> 
+                     <form id="form-criptomoneda" class="card-body">
+                        <div class="form-group">
+                          <input type="text" id="name" placeholder="Nombre de la Cripto" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <input type="number" id="precio" placeholder="Precio de la Cripto" class="form-control">
+
+                        </div>
+                        <div class="form-group"></div>
+                          <h6 class="text-dark">Fecha de la compra</h6>
+                          <input type="datetime" id="fecha" disabled>
+                     </form>
+
+                  </div>
+
+
+                </div>
+
+              </div class="col-md-8">
+
+            </div>
+        </div>
+      </div>
       <footer class="footer-distributed">
 
         <div class="footer-right">
@@ -198,7 +238,8 @@
 
   <!--JS de l'API-->
   <script src="js/APIcrypto.js"></script>
-
+  <!--JS del formulari-->
+  <script src="js/formularis.js"></script>
 
 </body>
 

@@ -53,10 +53,10 @@ function navbar(){
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Exchanges</a>
+          <a class="nav-link" href="#comprar">Comprar Criptomonedas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Ranking</a>
+          <a class="nav-link" href="#tablapreu">Ranking</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="login.html">Login</a>

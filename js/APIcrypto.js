@@ -53,6 +53,7 @@ let dades = fetch(url + qString, {
     })
     .then(function (datos) {       
         crearTabla(datos.data);
+        document.getElementById('name').addEventListener('onload', agafarPreuCompra(datos.data));
         document.getElementById('name').addEventListener('change', () => agafarPreuCompra(datos.data));
         
     })
@@ -107,10 +108,10 @@ function crearTabla(dades){
     }
 }
 
-/*Falta fer que el preu s'actualitze al cambiar de moneda*/
+/*Recoge el precio de compra de cada moneda y actualiza el valor*/
 function agafarPreuCompra(dades){
     for (let i = 0; i < dades.length; i++) {
-            
+        
         if(dades[i].symbol === 'BTC' & document.getElementById('name').value === 'BTC'){               
             document.getElementById('precio').value=dades[i].quote.USD.price;                                 
         }else if(dades[i].symbol === 'ETH' & document.getElementById('name').value === 'ETH'){
@@ -119,7 +120,8 @@ function agafarPreuCompra(dades){
             document.getElementById('precio').value=dades[i].quote.USD.price;
         }else if(dades[i].symbol === 'USDT' & document.getElementById('name').value === 'USDT'){
             document.getElementById('precio').value=dades[i].quote.USD.price;
-        }   
+        }
+           
 
     }
 

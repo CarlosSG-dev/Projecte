@@ -1,0 +1,120 @@
+
+
+/* ---- base ---- */
+html,body{ 
+  
+	width:100%;
+  height:100%;
+  
+	
+} 
+
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  scroll-behavior: smooth;
+}
+
+body{
+  font:normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  /* background-color: #683f1e; */
+  background-image: url('../IMG/People\ Bitcoin-34.jpg');
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  
+  
+}
+
+#buttonTop {
+  display: inline-block;
+  background-color: #545757;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#buttonTop::after {
+  font-family: 'Font Awesome';
+  /*PROBLEMA EN EL ICONO F077 (FLETCHA CAP AMUNT) DEL CONTENT*/
+  content: "\f077";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#buttonTop:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#buttonTop:active {
+  background-color: #555;
+}
+#buttonTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+

@@ -46,7 +46,7 @@ class Interfaz {
 
     eliminarCripto(element){
         element = document.getElementById("botoBorrar");
-        if (element == true) {
+        if (element.name === 'borrar') {
             
             element.parentElement.parentElement.remove();
             this.mensaje('Moneda Eliminada', 'danger');
@@ -79,8 +79,9 @@ class Interfaz {
 
 //Eventos DOM
 //Funció Fletxa dins d'un event -- Eliminar Moneda
-document.getElementById("form-criptomoneda").addEventListener("click", (e) => {
+document.getElementById("lista-criptos").addEventListener("click", (e) => {
     const ui = new Interfaz();
+    console.log(e.target);
     ui.eliminarCripto(e.target);
     
   });
@@ -108,5 +109,8 @@ document.getElementById('form-criptomoneda').addEventListener('submit', function
       interfaz.mensaje('Moneda comprada!', 'success');     
        
 });
+
+
+
 
 

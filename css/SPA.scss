@@ -74,7 +74,7 @@ h2 {
   background: #222;
   box-shadow: 0 -1px 2px rgba(black,0.4); 
   color: #fff;
-  padding: 4% 0 200px;
+  padding: 4% 0 0px;
   position: relative;
   z-index: 2;
   
@@ -107,4 +107,9 @@ h2 {
 }
 .img.trees {
   background-image: url(../IMG/People\ Bitcoin-34.jpg);
+}
+
+.compraEspai.img{
+  height:45%;
+  padding-bottom: 35px;
 }

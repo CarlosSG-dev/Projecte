@@ -1,66 +1,94 @@
+/*** FALTA MOLT PER ARREGLAR AL LOGIN *********/
+
 var objUsuaris = [
 	{
 		username: 'jose',
-		password: 'castillo123'
+		password: 'castillo'
 	},
 	{
 		username: 'carlos',
-		password: 'soler123'
+		password: 'soler'
 	}
 	
 ]
+cargarUsers();
 
-// login functionality
+function cargarUsers(){
+
+  for (let i = 0; i < objUsuaris.length; i++) {
+     console.log("Usuario "+objUsuaris[i].username+ (" cargado con éxito"));
+    
+  }
+  console.log('usuarios cargados');
+}
+
+
 function login() {
-	// retreive data from username and store in username variable
+	
 	var username = document.getElementById('email').value
-	// retreive data from password and store in password variable
 	var password = document.getElementById('pass').value
-
-	// loop through all the user pbjects and confrim if the username and password are correct
+	
 	for(var i = 0; i < objUsuaris.length; i++) {
-		// check to 
-		if(username == objUsuaris[i].username && password == objUsuaris[i].password) {
-			console.log(username + ' està logejat!!!')
-			// stop the statement if result is found true - this was a return in the video, break is best practice here
-			break
-		} else {
-			// error if username and password don't match
-			console.log('User o pass incorrectes')
+		
+		if(username === objUsuaris[i].username && password === objUsuaris[i].password) {
+      console.log(username + ' esta logeado!!!')
+      alert(username + ' esta logeado!!!')
+			break;
+		} else {	
+      console.log('User o pass incorrectas') 		    
+        if (!username === objUsuaris[i].username && !password === objUsuaris[i].password) {
+            alert('User o Pass incorrectas')
+            
+        }
 		}
 	}
 }
 
-// register functionality
-function registerUser() {
-	// store new users username
-	var registerUsername = document.getElementById('newUsername').value
-	// store new users password
-	var registerPassword = document.getElementById('newPassword').value
-	// store new user data in an object
-	var newUser = {
-		username: registerUsername,
-		password: registerPassword
-	}
-	// loop throught people array to see if the username is taken, or password to short
+function logout(){
+  var username = document.getElementById('email').value
+	var password = document.getElementById('pass').value
+	
 	for(var i = 0; i < objUsuaris.length; i++) {
-		// check if new username is equal to any already created usernames
-		if(registerUser == objUsuaris[i].username) {
-			// alert user that the username is take
-			alert('That username is alreat in user, please choose another')
-			// stop the statement if result is found true
-			break
-		// check if new password is 8 characters or more
-		} else if (registerPassword.length < 8) {
-			// alert user that the password is to short
-			alert('That is to short, include 8 or more characters')
-			// stop the statement if result is found true
-			break
+		
+		if(username == objUsuaris[i].username && password == objUsuaris[i].password) {
+      console.log(username + ' Deslogeado')
+     /*  objUsuaris.pop(-1); */ //Elimina l'usuari al fer logout
+      alert(username + ' Deslogeado!!!')
+			break;
+		} else {		
+      if (!username === objUsuaris[i].username && !password === objUsuaris[i].password){	
+      console.log('No hemos podido hacer logout, no hay ningún usuario logeado')
+      alert('No hemos podido hacer logout, no hay ningún usuario logeado')
+      }
 		}
 	}
-	// push new object to the people array
-	objUsuaris.push(newUser)
-	// console the updated people array
+  
+}
+
+/*No funciona bé el que ja estiga registrat el Usuari, seguix creant l'user*/
+function registrarUser() {
+	var registrarUsername = document.getElementById('nuevoUsername').value	
+	var registrarPassword = document.getElementById('nuevaPassword').value
+	
+	var nouUser = {
+		username: registrarUsername,
+		password: registrarPassword
+	}
+
+	for(var i = 0; i < objUsuaris.length; i++) {
+		for (let j = 0; j < nouUser.length; j++) {
+		if(registrarUser == objUsuaris[i].username && registrarUser == nouUser[j].username) {
+			alert('El usuario ya existe')
+			break;
+		} else if (registrarPassword.length < 8) {			
+			alert('La contraseña es demasiado corta, debe tener más de 8 carácteres')
+			break;
+    }
+  }
+  console.log('no ha entrat en el loop')
+	}
+  if(objUsuaris.push(nouUser))
+  alert('Usuario añadido correctamente')
 	console.log(objUsuaris)
 }
 
@@ -71,7 +99,7 @@ function registerUser() {
 
 
 
-
+/*******Funcions per a els efectes de canvi entre el login i el registre **********/
 
 function cambiar_login() {
   document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_login";  
@@ -116,8 +144,8 @@ document.querySelector('.cont_form_login').style.display = "none";
 
 
 
-
-
+/********************************* CODI MOZ.DEV D'UN FETCH PER A REGISTRAR-SE I FER LOGIN ********* */
+/* 
 function postFetchForSignUp() {
   let email = document.querySelector("#email")
   let pass = document.querySelector("#pass")
@@ -169,7 +197,7 @@ function logOutButton(){
   logOutButton.addEventListener('click', e=>{
     localStorage.clear() 
   })
- }
+ } */
 
 
 

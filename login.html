@@ -51,7 +51,9 @@
     <!-- particles.js Contingut -->
     <div id="particles-js">
         <!--Login-->
-       
+            <div class="container">
+                <button class="btn btn-warning" onclick="logout()">LogOut</button>
+            </div>
         
             <div class="cotn_principal">
                 <div class="cont_centrar">
@@ -99,17 +101,17 @@
                                 <h2>LOGIN</h2>
                                 <input type="text" placeholder="Email" id="email" />
                                 <input type="password" placeholder="Password" id="pass"/>
-                                <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+                                <button class="btn_login" onclick="login()">LOGIN</button>
                             </div>
 
                             <div class="cont_form_sign_up">
                                 <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
                                 <h2>REGISTRARSE</h2>
-                                <input type="text" placeholder="Email" />
-                                <input type="text" placeholder="User" />
-                                <input type="password" placeholder="Password" />
-                                <input type="password" placeholder="Confirm Password" />
-                                <button class="btn_sign_up" onclick="cambiar_sign_up()">REGISTRARSE</button>
+                                <input type="text" placeholder="Email" id="nuevoEmail" />
+                                <input type="text" placeholder="User" id="nuevoUsername" />
+                                <input type="password" placeholder="Password" id="nuevaPassword"/>
+                                <input type="password" placeholder="Confirm Password" id="confirmarPassword" />
+                                <button class="btn_sign_up" onclick="registrarUser()">REGISTRARSE</button>
 
                             </div>
 

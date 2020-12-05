@@ -39,3 +39,79 @@ document.querySelector('.cont_form_login').style.display = "none";
 },500);  
   
   }
+
+let formData = new FormData();
+
+class Usuario{
+
+
+	constructor() {
+    this.user;
+    this.pass;
+  }
+
+
+}
+
+
+
+function postFetchForSignUp() {
+  let email = document.querySelector("#email")
+  let pass = document.querySelector("#pass")
+  fetch('http://localhost/', {
+    method: 'POST',
+    headers: {
+      'Content-Type':'application/json',
+      'Accept':'application/json'
+    },
+    body: JSON.stringify({
+      email: email.value,
+      pass: pass.value
+    })
+  })
+  .then(res=>res.json())
+  .then(user => {
+    localStorage.clear()                                                            
+    localStorage.id = user.id  
+    slapUser(user)
+    logOutButton()
+  })
+}
+
+signInButton.addEventListener('click', e => {
+  signInForm()
+  let form = signDiv.querySelector('.sign-in')
+  let pass = document.querySelector("#pass")
+  form.addEventListener('submit', e=>{
+    e.preventDefault()
+    fetch('http://localhost/') 
+    .then(res=>res.json()) 
+    .then(usersArray => { 
+      let user = usersArray.find(function(user){ 
+          return user.username === pass.value 
+        })
+      if (user){
+        signDiv.innerHTML = ""
+        slapUser(user)
+        localStorage.id = user.id 
+        logOutButton()
+        writeReview()
+      }
+    })
+  })
+})
+
+function logOutButton(){
+  let logOutButton = document.getElementById('salir');
+  logOutButton.addEventListener('click', e=>{
+    localStorage.clear() 
+  })
+ }
+
+
+
+
+
+ 
+
+

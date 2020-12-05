@@ -8,7 +8,7 @@ Date.prototype.toDateInputValue = (function() {
 document.getElementById('fecha').value = new Date().toDateInputValue();
 
 
-/*Clases en la UI de la compra*/
+/*Clases*/
 class Criptomoneda{
 
 
@@ -56,7 +56,7 @@ class Interfaz {
 
     mensaje(mensaje, claseCSS){
         const div = document.createElement('div');
-        div.className=`alert alert-${claseCSS} mt-3`;
+        div.className=`alert alert-${claseCSS} mt-1`;
         div.appendChild(document.createTextNode(mensaje));
         //Mostra les alertes al comprar,etc
         const container = document.querySelector('#appCompra');
@@ -109,6 +109,10 @@ document.getElementById('form-criptomoneda').addEventListener('submit', function
       interfaz.mensaje('Moneda comprada!', 'success');     
        
 });
+
+let ssd = window.localStorage;
+
+
 
 
 

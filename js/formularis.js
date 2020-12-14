@@ -1,3 +1,4 @@
+
 /*Data actual actualitzada del formulari de compra*/
 Date.prototype.toDateInputValue = (function() {
     var local = new Date(this);
@@ -92,8 +93,8 @@ document.getElementById('form-criptomoneda').addEventListener('submit', function
        const nom = document.getElementById('name').value;
        const preu = document.getElementById('precio').value;
        const cant = document.getElementById('cantidad').value;
-       const preuTotal = preu*cant;
-       const fecha = document.getElementById('fecha').value;
+       let preuTotal = preu*cant;
+       const fecha = document.querySelector('#fecha').value;
        
        
 //Objectes -- Creem els objectes a añadir y la Intefaç de compra
@@ -111,6 +112,10 @@ document.getElementById('form-criptomoneda').addEventListener('submit', function
 });
 
 let ssd = window.localStorage;
+
+//Validació Formularis per a inscriure's en el newsletter
+
+
 
 
 

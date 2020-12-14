@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/IMG/favicon.ico" type="image/x-icon">
   <title>Crypto Simarro @CarlossSoler</title>
   <!--CSS-->
   <link rel="stylesheet" media="screen" href="css/style.css">
@@ -12,6 +13,7 @@
   <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.0/dist/bootstrap-table.min.css">
   <link rel="stylesheet" href="css/SPA.scss">
   <link rel="stylesheet" href="css/cartes.css">
+  <link rel="stylesheet" href="css/estilFormulari.css">
   <!-- Bootstrap & scripts-->
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -210,36 +212,115 @@
             </div>
         </div>
       </div>
+      <div class="inner" id="formulari">
+        <h1>Suscríbete a nuestro NewsLetter!</h1>
+        <p>Todas las semanas te informamos de las noticias más actuales y los mejores análisis del mundo de las criptomonedas, a qué esperas? </p>
+      </div>
+      <div class="img trees compraEspai">
+        <!-- Formulari rebre newsletter -->
+        <div class="contenedorForm">
+        <form class="formulari" method="post" action="html/procesaformulario.php">
+          <li>
+              <div id="errores">
+
+              </div>
+          </li>
+          
+             
+          <ul>
+              <li id="caja-nom">
+                  <label for="registre-nom"> Nombre: </label>
+                  <input type="text" id="registre-nom" name="nom" placeholder="Nombre" />
+              </li>
+
+
+              <li id="caja-cognom">
+                  <label for="cognoms"> Apellidos: </label>
+                  <input type="text" id="cognoms" name="cognoms" placeholder="Apellidos" />
+              </li>
+
+              <li id="caja-email">
+                  <label for="email"> E-mail: </label>
+                  <input type="text" id="email" name="email" placeholder="email@gmail.com" />
+              </li>
+
+              <li id="caja-web">
+                  <label for="url"> Website: </label>
+                  <input type="url" id="url" name="url" placeholder="http://www.google.es/" />
+              </li>
+
+              <li id="caja-pass">
+                  <label for="password"> Contraseña:</label>
+
+                  <input type="password" minlength="6" id="contrasena" name="password" />
+              </li>
+
+
+              <li>
+                  <label>Cada cuanto tiempo quieres recibir noticias?</label>
+                  <select>
+                      <optgroup label="Selecciona tu categoria favorita">
+                          <option>Cada 7 días</option>
+                          <option>Cada mes</option>
+                      </optgroup>
+                  </select>
+              </li>
+
+
+              <li id="caja-fecha">
+                  <label for="datainici">Inicio de suscripción:</label>
+                  <input type="date" id="datainici" name="datainici" dateformat="dd/MM/yyyy" />
+              </li>
+              <br>
+              <li>
+                  <label for="upsell"> Quiero recibir también informacion semanal sobre <cite><strong>CryptoSimarro</strong></cite> </label>
+                  <input type="checkbox" id="upsell" name="upsell" />
+              </li>
+
+              <li>
+                  <input type="reset" id="reset" value="Reset"></input><br>
+                  <br>
+
+              </li>
+
+              <li>
+                  <input type="button" value="Registrarme" value="Enviar" onclick="enviar()" />
+              </li>
+
+          </ul>
+      </form>
     </div>
-      <footer class="footer-distributed">
+      </div>
+    </div>
+    <footer class="footer-distributed">
 
-        <div class="footer-right">
+      <div class="footer-right">
 
-          <a href="#" class="facebookiconofoot"><i></i></a>
-          <a href="#" class="twitterfoot"><i></i></a>
-          <a href="#" class="instagramfoot"><i></i></a>
-          <a href="#" class="githubfoot"><i></i></a>
+       
+        <a href="https://twitter.com/CarloosSoler" class="twitterfoot"><i></i></a>
+        <a href="https://www.instagram.com/carlos.sg13/" class="instagramfoot"><i></i></a>
+        <a href="https://github.com/CarlosSG-dev" class="githubfoot"><i></i></a>
 
-        </div>
+      </div>
 
-        <div class="footer-left">
+      <div class="footer-left">
 
-          <p class="footer-links">
-            <a class="link-1" href="#index.html">Inicio</a>
+        <p class="footer-links">
+          <a class="link-1" href="index.html">Inicio</a>
 
-            <a href="#">Exchanges</a>
+          <a href="index.html#comprar">Comprar Cripto</a>
 
-            <a href="#" id="mostrarTabla">Ranking</a>
+          <a href="index.html#tablapreu">Ranking</a>
 
-            <a href="#">Proyectos</a>
+          <a href="login.html">Login</a>
 
-            <a href="#">Contacto</a>
-          </p>
+          <a href="index.html#formulari">Newsletter</a>
+        </p>
 
-          <p>Crypto Simarro @CarlossSoler</p>
-        </div>
+        <p>Crypto Simarro @CarlossSoler</p>
+      </div>
 
-      </footer>
+    </footer>
     
 
   </div>
@@ -253,6 +334,7 @@
   <!--JS de l'API-->
   <script src="js/APIcrypto.js"></script>
   <!--JS del formulari-->
+  <script src="js/validacioFormulari.js"></script>
   <script src="js/formularis.js"></script>
   <!--JS de les cookies-->
   <script src="js/cookies.js"></script>

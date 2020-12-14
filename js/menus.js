@@ -53,13 +53,16 @@ function navbar(){
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#comprar">Comprar Criptomonedas</a>
+          <a class="nav-link" href="index.html#comprar">Comprar Criptomonedas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#tablapreu">Ranking</a>
+          <a class="nav-link" href="index.html#tablapreu">Ranking</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#formulari">Newsletter</a>
         </li>
       </ul>
     </div>
@@ -68,6 +71,7 @@ function navbar(){
   $('#navbar').html(navbar);
 
 }
+
 
 /*Boto per a que torne dalt de la pàgina, apareix al fer scroll de 300*/
 var btn = $('#buttonTop');

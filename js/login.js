@@ -11,6 +11,10 @@ var objUsuaris = [
 	}
 	
 ]
+
+
+
+console.log('Destructuring per a vore el nom per consola: '+objUsuaris[0][0])
 cargarUsers();
 
 function cargarUsers(){
@@ -35,7 +39,8 @@ function login() {
       alert(username + ' esta logeado!!!')
 			break;
 		} else {	
-      console.log('User o pass incorrectas') 		    
+      console.log('User o pass incorrectas')
+      alert('User o Pass incorrectas') 		    
         if (!username === objUsuaris[i].username && !password === objUsuaris[i].password) {
             alert('User o Pass incorrectas')
             

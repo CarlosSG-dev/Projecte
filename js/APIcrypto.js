@@ -1,7 +1,6 @@
 
-/*USE STRICT*/
 
-"use strict";
+
 
 /*Fem Obfuscation per a ocultar el codi de la apiKey 
 JS del navegador i la declaració de la variable queda així:/ He utilitzat
@@ -37,6 +36,7 @@ eval(function (p, a, c, k, e, d) {
 
 
 /* Promises y fetch */
+"use strict";
 
 let apiKey=`ff41c73f-f641-4d42-a901-edfa0aab934f`;
 
@@ -51,10 +51,14 @@ let dades = fetch(url + qString, {
         console.log(resp);
         return resp.json();
     })
-    .then(function (datos) {       
+    .then(async function (datos) {       
+        await new Promise((resolve)=>setTimeout(()=>{
         crearTabla(datos.data);
         document.getElementById('name').addEventListener('onload', agafarPreuCompra(datos.data));
         document.getElementById('name').addEventListener('change', () => agafarPreuCompra(datos.data));
+
+        }),1000).catch((error)=>console.log(error));
+      
         
     })
 

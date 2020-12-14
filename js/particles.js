@@ -3,7 +3,7 @@ var pJS = function(tag_id, params){
 
   var canvas_el = document.querySelector('#'+tag_id+' > .particles-js-canvas-el');
 
-  /* particles.js variables with default values */
+  /* particles.js*/
   this.pJS = {
     canvas: {
       el: canvas_el,
@@ -1513,7 +1513,7 @@ window.particlesJS = function(tag_id, params){
 
 window.particlesJS.load = function(tag_id, path_config_json, callback){
 
-  /* load json config */
+  /* carregar json config */
   var xhr = new XMLHttpRequest();
   xhr.open('GET', path_config_json);
   xhr.onreadystatechange = function (data) {
@@ -1523,8 +1523,8 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
         window.particlesJS(tag_id, params);
         if(callback) callback();
       }else{
-        console.log('Error pJS - XMLHttpRequest status: '+xhr.status);
-        console.log('Error pJS - File config not found');
+        console.log('Error  - XMLHttpRequest status: '+xhr.status);
+        console.log('Error  - Archiu de configuracio ');
       }
     }
   };

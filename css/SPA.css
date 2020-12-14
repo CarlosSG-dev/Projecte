@@ -1,17 +1,17 @@
 /* @import "compass/css3"; */
-body {
+/* body {
   font-size: 20px;
   font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.5;
-}
+   font-weight: 300;
+  line-height: 1.5; 
+} */
 
-h1, h2, h3, h4, h5, h6 {
+/* h1, h2, h3, h4, h5, h6 {
   font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
   margin: 0;
   text-transform: uppercase;
   text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4);
-}
+} */
 
 h1 {
   font-size: 60px;
@@ -31,7 +31,7 @@ h2 {
 }
 
 .inner > h4 {
-  padding: 20px;
+   padding: 20px; 
   text-align: center;
 }
 
@@ -39,13 +39,7 @@ h2 {
   text-align: center;
 }
 
-.logo {
-  left: 50%;
-  margin: 50px 0 50px -150px;
-  opacity: 0.8;
-  position: absolute;
-  width: 300px;
-}
+
 
 .content {
   background: #222;
@@ -74,7 +68,7 @@ h2 {
 
 .img:after {
   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 30%, black 100%);
-  content: '';
+ /*  content: ''; */
   height: 100%;
   left: 0;
   position: absolute;

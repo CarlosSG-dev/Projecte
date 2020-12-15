@@ -48,7 +48,7 @@ Document formularis.js // Linea 58 createElement
 			   //Linea 42, 60 appendChild
 			   
 -Validació de formularis:
-
+Document validacioFormulari.js // Totes les funcions per a validar els camps del formulari de subscripció.
 
 
 -Destructuring:

@@ -45,7 +45,10 @@ let url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest",
 
 
 let dades = fetch(url + qString, {
-    mode: `cors`
+    mode: `cors`,
+    headers: {
+   "Access-Control-Allow-Origin": "*"  //Intento de solución al problema del CORS, que se envie la petición con un header que permita el acceso a los datos de la API/Servidor.
+ }
 })
     .then(function (resp) {
         console.log(resp);
